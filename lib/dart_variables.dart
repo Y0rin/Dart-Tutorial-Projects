@@ -9,7 +9,8 @@ void main() {
   // Using String is more specific and preferred for readability
 
   String petOwnerName = "Alice"; // Explicit type declaration
-  var petOwnerNote = "Alice loves animals and visits the shelter regularly."; // Type inferred (String)
+  var petOwnerNote =
+      "Alice loves animals and visits the shelter regularly."; // Type inferred (String)
   print("Pet Owner: $petOwnerName");
   print("Owner Note: $petOwnerNote");
 
@@ -18,7 +19,7 @@ void main() {
   // ============================
   // int: used to declare whole number type variables
   // var: can also be used for integers, type is inferred from the assigned value
-  
+
   int catAge = 5;
   var dogAge = 3; // Dart infers this as int
   print("Cat age: $catAge");
@@ -54,10 +55,18 @@ void main() {
   // const List: immutable list (cannot modify items or add/remove)
   // final List: list reference cannot change, but items can be modified
 
-  const List<String> commonPetTypes = ['Cat', 'Dog', 'Rabbit']; // Immutable list
+  const List<String> commonPetTypes = [
+    'Cat',
+    'Dog',
+    'Rabbit',
+  ]; // Immutable list
   print("Common Pet Types: $commonPetTypes");
 
-  final List<String> petSupplies = ['Food Bowl', 'Leash', 'Toy']; // Mutable list
+  final List<String> petSupplies = [
+    'Food Bowl',
+    'Leash',
+    'Toy',
+  ]; // Mutable list
   print("Pet Supplies: $petSupplies");
   petSupplies.add('Shampoo'); // Allowed because list itself is mutable
   print("Updated Pet Supplies: $petSupplies");
@@ -115,7 +124,7 @@ void main() {
   // petName = 10; // ❌ Compile-time error
 
   dynamic flexibleValue = "Food Bowl";
-  flexibleValue = 10;   // ✅ Allowed
+  flexibleValue = 10; // ✅ Allowed
   flexibleValue = true; // ✅ Allowed
 
   print("Inferred Var (petName): $petName");
@@ -207,7 +216,9 @@ void data() {
   String catBreed = "Russian Blue";
   String dogBreed = "Border Collie";
 
-  print("$dogOwnerName owns a $alicePetType named $dogName. It is a $dogBreed.");
+  print(
+    "$dogOwnerName owns a $alicePetType named $dogName. It is a $dogBreed.",
+  );
   print("$catOwnerName owns a $bobPetType named $catName. It is a $catBreed.");
 
   //============================
